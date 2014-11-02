@@ -1,0 +1,28 @@
+{
+    "appKeys": {
+        "calEnd": 3,
+        "calFetchAll": 5,
+        "calFetchOne": 0,
+        "calIndex": 7,
+        "calLocation": 4,
+        "calStart": 2,
+        "calSubject": 1,
+        "calTotal": 6
+    },
+    "capabilities": [
+        ""
+    ],
+    "companyName": "kgutwin",
+    "longName": "Meetings",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "shortName": "Meetings",
+    "uuid": "594fdcc8-10c8-4e8a-ae82-065fcfc217b5",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
