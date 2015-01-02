@@ -45,13 +45,13 @@ void compute_day_breaks() {
 
 void out_sent_handler(DictionaryIterator *sent, void *context) {
 	// outgoing message was delivered
-	APP_LOG(APP_LOG_LEVEL_DEBUG, "out_sent_handler");
+	//APP_LOG(APP_LOG_LEVEL_DEBUG, "out_sent_handler");
 }
 
 
 void out_failed_handler(DictionaryIterator *failed, AppMessageResult reason, void *context) {
 	// outgoing message failed
-	APP_LOG(APP_LOG_LEVEL_DEBUG, "out_failed_handler");
+	//APP_LOG(APP_LOG_LEVEL_DEBUG, "out_failed_handler");
 }
 
 
@@ -155,11 +155,11 @@ void in_received_handler(DictionaryIterator *received, void *context) {
 
 void in_dropped_handler(AppMessageResult reason, void *context) {
 	// incoming message dropped
-	APP_LOG(APP_LOG_LEVEL_DEBUG, "in_dropped_handler");
+	//APP_LOG(APP_LOG_LEVEL_DEBUG, "in_dropped_handler");
 }
 
 void app_message_fetch_calendar(int i) {
-	APP_LOG(APP_LOG_LEVEL_DEBUG, "app_message_fetch_calendar %d", i);
+	//APP_LOG(APP_LOG_LEVEL_DEBUG, "app_message_fetch_calendar %d", i);
 	DictionaryIterator *iter;
 		
 	app_message_outbox_begin(&iter);
