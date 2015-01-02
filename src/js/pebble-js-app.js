@@ -1,6 +1,6 @@
 var lastResponse;
 
-var TZOFF = -4 * 60 * 60;
+//var TZOFF = -4 * 60 * 60;
 
 function sendOneCalendar(i) {
 	if (! lastResponse) return;
@@ -9,6 +9,8 @@ function sendOneCalendar(i) {
 	//console.log("sendOneCalendar " + i);
 	var o = lastResponse.mtgs[i];
 	//console.log(JSON.stringify(o));
+	var d = new Date();
+	var TZOFF = d.getTimezoneOffset() * -60;
 	Pebble.sendAppMessage({
 		"calIndex": i,
 		"calSubject": o.subject,
@@ -59,8 +61,8 @@ Pebble.addEventListener(
 Pebble.addEventListener(
 	"appmessage",
 	function(e) {
-		//console.log("RECEIVED MESSAGE:");
-		//console.log(JSON.stringify(e));
+		console.log("RECEIVED MESSAGE:");
+		console.log(JSON.stringify(e));
 		if (e.payload.calFetchAll) {
 			tryCalendar();
 		}
